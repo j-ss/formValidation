@@ -13,8 +13,8 @@ public class Details {
   @Pattern(regexp = "\\w+\\@[a-z]+\\.[a-zA-Z]{3,5}",message = "enter valid email")
   private String email;
   @NotNull(message = "required")
-  @Pattern(regexp = "^(\\+91|0)?[6-9][0-9]{9}",message = "invalid phone no")
-  private String phone;
+  //@Pattern(regexp = "^(\\+91|0)?[6-9][0-9]{9}",message = "invalid phone no")
+  private Integer phone;
   @NotNull(message = "required")
   private String city;
 
@@ -35,11 +35,11 @@ public class Details {
     this.email = email;
   }
 
-  public String getPhone() {
+  public Integer getPhone() {
     return phone;
   }
 
-  public void setPhone(String phone) {
+  public void setPhone(Integer phone) {
     this.phone = phone;
   }
 
